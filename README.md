@@ -1,7 +1,7 @@
-# The Complete Flutter Development Bootcamp with Dart
+# Flutter & Dart - The Complete Guide
 ### Описание курса: 
-> Курс для освоения языка Dart и фреймворка Flutter.</br>
-[Ссылка на курс](https://www.udemy.com/course/flutter-bootcamp-with-dart/)
+> Курс по Flutter</br>
+[Ссылка на курс](https://www.udemy.com/course/learn-flutter-dart-to-build-ios-android-apps/)
 
 ### Описание проекта:
 Проект содержит практические занятия и домашние работы по курсу.

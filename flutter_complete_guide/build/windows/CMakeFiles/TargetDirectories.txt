@@ -1,0 +1,10 @@
+C:/Users/BondarevIY/Projects/flutter_course_1/flutter_complete_guide/build/windows/CMakeFiles/INSTALL.dir
+C:/Users/BondarevIY/Projects/flutter_course_1/flutter_complete_guide/build/windows/CMakeFiles/ALL_BUILD.dir
+C:/Users/BondarevIY/Projects/flutter_course_1/flutter_complete_guide/build/windows/CMakeFiles/ZERO_CHECK.dir
+C:/Users/BondarevIY/Projects/flutter_course_1/flutter_complete_guide/build/windows/flutter/CMakeFiles/flutter_wrapper_plugin.dir
+C:/Users/BondarevIY/Projects/flutter_course_1/flutter_complete_guide/build/windows/flutter/CMakeFiles/flutter_wrapper_app.dir
+C:/Users/BondarevIY/Projects/flutter_course_1/flutter_complete_guide/build/windows/flutter/CMakeFiles/flutter_assemble.dir
+C:/Users/BondarevIY/Projects/flutter_course_1/flutter_complete_guide/build/windows/flutter/CMakeFiles/INSTALL.dir
+C:/Users/BondarevIY/Projects/flutter_course_1/flutter_complete_guide/build/windows/runner/CMakeFiles/flutter_complete_guide.dir
+C:/Users/BondarevIY/Projects/flutter_course_1/flutter_complete_guide/build/windows/runner/CMakeFiles/INSTALL.dir
+C:/Users/BondarevIY/Projects/flutter_course_1/flutter_complete_guide/build/windows/runner/CMakeFiles/ALL_BUILD.dir

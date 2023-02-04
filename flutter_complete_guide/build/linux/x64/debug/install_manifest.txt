@@ -1,0 +1,12 @@
+/home/ivan/Programming/Projects/flutter_course_1/flutter_complete_guide/build/linux/x64/debug/bundle/flutter_complete_guide
+/home/ivan/Programming/Projects/flutter_course_1/flutter_complete_guide/build/linux/x64/debug/bundle/data/icudtl.dat
+/home/ivan/Programming/Projects/flutter_course_1/flutter_complete_guide/build/linux/x64/debug/bundle/lib/libflutter_linux_gtk.so
+/home/ivan/Programming/Projects/flutter_course_1/flutter_complete_guide/build/linux/x64/debug/bundle/data/flutter_assets/fonts/MaterialIcons-Regular.otf
+/home/ivan/Programming/Projects/flutter_course_1/flutter_complete_guide/build/linux/x64/debug/bundle/data/flutter_assets/version.json
+/home/ivan/Programming/Projects/flutter_course_1/flutter_complete_guide/build/linux/x64/debug/bundle/data/flutter_assets/FontManifest.json
+/home/ivan/Programming/Projects/flutter_course_1/flutter_complete_guide/build/linux/x64/debug/bundle/data/flutter_assets/AssetManifest.json
+/home/ivan/Programming/Projects/flutter_course_1/flutter_complete_guide/build/linux/x64/debug/bundle/data/flutter_assets/kernel_blob.bin
+/home/ivan/Programming/Projects/flutter_course_1/flutter_complete_guide/build/linux/x64/debug/bundle/data/flutter_assets/shaders/ink_sparkle.frag
+/home/ivan/Programming/Projects/flutter_course_1/flutter_complete_guide/build/linux/x64/debug/bundle/data/flutter_assets/AssetManifest.bin
+/home/ivan/Programming/Projects/flutter_course_1/flutter_complete_guide/build/linux/x64/debug/bundle/data/flutter_assets/NOTICES.Z
+/home/ivan/Programming/Projects/flutter_course_1/flutter_complete_guide/build/linux/x64/debug/bundle/data/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf

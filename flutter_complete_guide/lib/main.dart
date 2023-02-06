@@ -4,7 +4,32 @@ void main() {
   runApp(MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() {
+    return MyAppState();
+  }
+}
+
+class MyAppState extends State<MyApp> {
+  var questionIndex = 0;
+
+  void answerQuestion() {
+    setState(() {
+      if (questionIndex < listPhrases.length - 1) {
+        questionIndex++;
+      } else if (questionIndex >= listPhrases.length - 1) {
+        questionIndex--;
+      }
+    });
+    print(questionIndex);
+  }
+
+  var listPhrases = <String>[
+    'What is your favorite color?',
+    'What is your favorite animal?',
+  ];
+
   @override
   Widget build(BuildContext contex) {
     return MaterialApp(
@@ -14,9 +39,9 @@ class MyApp extends StatelessWidget {
         ),
         body: Column(
           children: [
-            Text('some text'),
+            Text(listPhrases[questionIndex]),
             ElevatedButton(
-              onPressed: () => print('pressed1'),
+              onPressed: answerQuestion,
               child: Text('answer 1'),
             ),
             ElevatedButton(

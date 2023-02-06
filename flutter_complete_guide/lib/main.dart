@@ -12,7 +12,23 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text('bar'),
         ),
-        body: Text('Body text here'),
+        body: Column(
+          children: [
+            Text('some text'),
+            ElevatedButton(
+              onPressed: () => print('pressed1'),
+              child: Text('answer 1'),
+            ),
+            ElevatedButton(
+              onPressed: () => print('pressed2'),
+              child: Text('answer 2'),
+            ),
+            ElevatedButton(
+              onPressed: null,
+              child: Text('answer 3'),
+            ),
+          ],
+        ),
       ),
     );
   }

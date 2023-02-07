@@ -1,6 +1,7 @@
 /home/ivan/Programming/Projects/flutter_course_1/flutter_complete_guide/build/linux/x64/debug/bundle/flutter_complete_guide
 /home/ivan/Programming/Projects/flutter_course_1/flutter_complete_guide/build/linux/x64/debug/bundle/data/icudtl.dat
 /home/ivan/Programming/Projects/flutter_course_1/flutter_complete_guide/build/linux/x64/debug/bundle/lib/libflutter_linux_gtk.so
+/home/ivan/Programming/Projects/flutter_course_1/flutter_complete_guide/build/linux/x64/debug/bundle/data/flutter_assets/fonts/Rubik-VariableFont_wght.ttf
 /home/ivan/Programming/Projects/flutter_course_1/flutter_complete_guide/build/linux/x64/debug/bundle/data/flutter_assets/fonts/MaterialIcons-Regular.otf
 /home/ivan/Programming/Projects/flutter_course_1/flutter_complete_guide/build/linux/x64/debug/bundle/data/flutter_assets/version.json
 /home/ivan/Programming/Projects/flutter_course_1/flutter_complete_guide/build/linux/x64/debug/bundle/data/flutter_assets/FontManifest.json

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_complete_guide/answer.dart';
 import 'package:flutter_complete_guide/question.dart';
 
 void main() {
@@ -15,7 +16,7 @@ class MyApp extends StatefulWidget {
 class MyAppState extends State<MyApp> {
   var questionIndex = 0;
 
-  void answerQuestion() {
+  void _answerQuestion() {
     setState(() {
       if (questionIndex < listPhrases.length - 1) {
         questionIndex++;
@@ -36,23 +37,14 @@ class MyAppState extends State<MyApp> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('bar'),
+          title: const Text('bar'),
         ),
         body: Column(
           children: [
             Question(listPhrases[questionIndex]),
-            ElevatedButton(
-              onPressed: answerQuestion,
-              child: Text('answer 1'),
-            ),
-            ElevatedButton(
-              onPressed: () => print('pressed2'),
-              child: Text('answer 2'),
-            ),
-            ElevatedButton(
-              onPressed: null,
-              child: Text('answer 3'),
-            ),
+            Answer(_answerQuestion),
+            Answer(_answerQuestion),
+            Answer(_answerQuestion),
           ],
         ),
       ),

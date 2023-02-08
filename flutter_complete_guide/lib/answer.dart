@@ -3,8 +3,9 @@ import './question.dart';
 
 class Answer extends StatelessWidget {
   final Function question;
+  final String answerText;
 
-  const Answer(this.question);
+  const Answer(this.question, this.answerText);
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +13,7 @@ class Answer extends StatelessWidget {
       width: double.infinity,
       child: ElevatedButton(
         onPressed: question,
-        child: const Text('Answer 1'),
+        child: Text(answerText),
       ),
     );
   }

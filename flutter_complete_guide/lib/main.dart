@@ -18,18 +18,24 @@ class MyAppState extends State<MyApp> {
 
   void _answerQuestion() {
     setState(() {
-      if (questionIndex < listPhrases.length - 1) {
-        questionIndex++;
-      } else if (questionIndex >= listPhrases.length - 1) {
-        questionIndex--;
-      }
+      questionIndex++;
     });
     print(questionIndex);
   }
 
-  var listPhrases = <String>[
-    'What is your favorite color?',
-    'What is your favorite animal?',
+  var questions = [
+    {
+      'questionText': 'What\'s your favorite color?',
+      'answers': ['Black', 'Red', 'Green', 'Blue', 'White']
+    },
+    {
+      'questionText': 'What is your favorite animal?',
+      'answers': ['Rabbit', 'Bear', 'Tiger', 'Mouse']
+    },
+    {
+      'questionText': 'Who is yor favorite celebrities?',
+      'answers': ['Margo Robbie', 'Aenold Schwarzenegger']
+    },
   ];
 
   @override
@@ -41,10 +47,10 @@ class MyAppState extends State<MyApp> {
         ),
         body: Column(
           children: [
-            Question(listPhrases[questionIndex]),
-            Answer(_answerQuestion),
-            Answer(_answerQuestion),
-            Answer(_answerQuestion),
+            Question(questions[questionIndex]['questionText']),
+            ...(questions[questionIndex]['answers'] as List<String>)
+                .map((e) => Answer(_answerQuestion, e))
+                .toList(),
           ],
         ),
       ),
@@ -58,3 +64,6 @@ class Person {
 
   Person({this.name, this.age});
 }
+
+
+// 047

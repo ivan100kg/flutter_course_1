@@ -2,8 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_complete_guide/answer.dart';
 import 'package:flutter_complete_guide/question.dart';
 
+import 'widgets/app.dart';
+
 void main() {
-  runApp(MyApp());
+  // final app = MyApp();
+  const app = App();
+  runApp(app);
 }
 
 class MyApp extends StatefulWidget {
@@ -47,10 +51,10 @@ class MyAppState extends State<MyApp> {
         ),
         body: Column(
           children: [
-            Question(questions[questionIndex]['questionText']),
-            ...(questions[questionIndex]['answers'] as List<String>)
-                .map((e) => Answer(_answerQuestion, e))
-                .toList(),
+            // Question(questions[questionIndex]['questionText']),
+            // ...(questions[questionIndex]['answers'] as List<String>)
+            //     .map((e) => Answer(_answerQuestion, e))
+            //     .toList(),
           ],
         ),
       ),
@@ -62,7 +66,7 @@ class Person {
   String name;
   int age;
 
-  Person({this.name, this.age});
+  Person({required this.name, required this.age});
 }
 
 

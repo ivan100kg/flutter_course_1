@@ -1,19 +1,104 @@
 import 'package:flutter/material.dart';
 
 class UserProfile extends StatelessWidget {
-  const UserProfile({super.key});
+  UserProfile({super.key});
+
+  final List<MenuRowData> firstMenuRow = [
+    MenuRowData(text: 'Избранное', icon: Icons.favorite),
+    MenuRowData(text: 'Звонки', icon: Icons.call),
+    MenuRowData(text: 'устройства', icon: Icons.computer),
+    MenuRowData(text: 'Говно', icon: Icons.shield_moon_outlined),
+  ];
+
+  final List<MenuRowData> secondMenuRow = [
+    MenuRowData(text: 'Звуки', icon: Icons.surround_sound),
+    MenuRowData(text: 'Кофидециальность', icon: Icons.privacy_tip),
+    MenuRowData(text: 'Память', icon: Icons.memory),
+    MenuRowData(text: 'Оформление', icon: Icons.app_registration),
+    MenuRowData(text: 'Язык', icon: Icons.language),
+  ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey,
       appBar: AppBar(
         title: Center(child: Text('Settings')),
       ),
       body: Container(
-        width: double.infinity,
+          width: double.infinity,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              _UserInfo(),
+              SizedBox(height: 20),
+              _MenuWidget(
+                menuRow: firstMenuRow,
+              ),
+              SizedBox(height: 2),
+              _MenuWidget(
+                menuRow: secondMenuRow,
+              ),
+            ],
+          )),
+    );
+  }
+}
+
+class MenuRowData {
+  final IconData icon;
+  final String text;
+
+  MenuRowData({required this.icon, required this.text});
+}
+
+class _MenuWidget extends StatelessWidget {
+  final List<MenuRowData> menuRow;
+  const _MenuWidget({super.key, required this.menuRow});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      color: Colors.white,
+      width: double.infinity,
+      child: Column(
+          children: menuRow.map((el) => _MenuWidgetRow(data: el)).toList()),
+    );
+  }
+}
+
+class _MenuWidgetRow extends StatelessWidget {
+  MenuRowData data;
+  _MenuWidgetRow({required this.data});
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+      child: Row(
+        children: [
+          Icon(data.icon),
+          SizedBox(width: 10),
+          Expanded(child: Text(data.text)),
+          Icon(Icons.chevron_right_sharp),
+        ],
+      ),
+    );
+  }
+}
+
+class _UserInfo extends StatelessWidget {
+  const _UserInfo({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+        // margin: EdgeInsets.only(left: 20, right: 20),
+        color: Colors.white,
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             SizedBox(
               height: 30,
@@ -35,9 +120,7 @@ class UserProfile extends StatelessWidget {
               height: 20,
             ),
           ],
-        ),
-      ),
-    );
+        ));
   }
 }
 

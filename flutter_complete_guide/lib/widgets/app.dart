@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'custom_single_child_layout.dart';
-import 'layout.dart';
+import 'package:flutter_complete_guide/widgets/stack.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -12,7 +11,7 @@ class App extends StatelessWidget {
       // home: UserProfile(),
       home: Scaffold(
         appBar: AppBar(title: Text('Bar')),
-        body: MyCustomSingle(),
+        body: MyStack(),
       ),
     );
   }

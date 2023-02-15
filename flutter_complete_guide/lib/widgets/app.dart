@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_complete_guide/widgets/user_profile.dart';
+import 'custom_single_child_layout.dart';
+import 'layout.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -8,7 +9,11 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'some title',
-      home: UserProfile(),
+      // home: UserProfile(),
+      home: Scaffold(
+        appBar: AppBar(title: Text('Bar')),
+        body: MyCustomSingle(),
+      ),
     );
   }
 }

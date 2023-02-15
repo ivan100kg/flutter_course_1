@@ -1,14 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_complete_guide/answer.dart';
-import 'package:flutter_complete_guide/question.dart';
-import 'package:flutter_complete_guide/widgets/layout.dart';
 
 import 'widgets/app.dart';
 
 void main() {
   // final app = MyApp();
-  // const app = App();
-  const app = LayoutApp();
+  const app = App();
   runApp(app);
 }
 

@@ -7,54 +7,9 @@ class MyListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView(
-      children: [
-        Text('data'),
-        Text('data'),
-        Text('data'),
-        Text('data'),
-        Text('data'),
-        Text('data'),
-        Text('data'),
-        Text('data'),
-        Text('data'),
-        Text('data'),
-        Text('data'),
-        Text('data'),
-        Text('data'),
-        Text('data'),
-        Text('data'),
-        Text('data'),
-        Text('data'),
-        Text('data'),
-        Text('data'),
-        Text('data'),
-        Text('data'),
-        Text('data'),
-        Text('data'),
-        Text('data'),
-        Text('data'),
-        Text('data'),
-        Text('data'),
-        Text('data'),
-        Container(
-          height: 100,
-          color: Colors.blue,
-        ),
-        Container(
-          height: 150,
-          color: Colors.red,
-        ),
-        Container(
-          height: 120,
-          color: Colors.green,
-        ),
-        Container(
-          height: 40,
-          color: Colors.grey,
-        ),
-        _MyCont(),
-      ],
+    return ListView.builder(
+      addAutomaticKeepAlives: false,
+      itemBuilder: (context, index) => TextField(),
     );
   }
 }

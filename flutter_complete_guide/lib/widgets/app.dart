@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_complete_guide/widgets/scroll.dart';
 import 'package:flutter_complete_guide/widgets/stack.dart';
 
 class App extends StatelessWidget {
@@ -11,7 +12,7 @@ class App extends StatelessWidget {
       // home: UserProfile(),
       home: Scaffold(
         appBar: AppBar(title: Text('Bar')),
-        body: MyStack(),
+        body: MyScroll(),
       ),
     );
   }

@@ -27,9 +27,7 @@ class UserProfile extends StatelessWidget {
       ),
       body: Container(
           width: double.infinity,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.center,
+          child: ListView(
             children: [
               _UserInfo(),
               SizedBox(height: 20),
@@ -95,32 +93,44 @@ class _UserInfo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-        // margin: EdgeInsets.only(left: 20, right: 20),
-        color: Colors.white,
-        child: Column(
-          children: [
-            SizedBox(
-              height: 30,
-            ),
-            _AvatarWidget(),
-            SizedBox(
-              height: 30,
-            ),
-            _UserNameWidget(),
-            SizedBox(
-              height: 20,
-            ),
-            _UserPhoneWidget(),
-            SizedBox(
-              height: 20,
-            ),
-            _UserEmailWidget(),
-            SizedBox(
-              height: 20,
-            ),
-          ],
-        ));
+    return Stack(
+      children: [
+        Container(
+            // margin: EdgeInsets.only(left: 20, right: 20),
+            color: Colors.white,
+            child: Column(
+              children: [
+                SizedBox(
+                  height: 30,
+                ),
+                _AvatarWidget(),
+                SizedBox(
+                  height: 30,
+                ),
+                _UserNameWidget(),
+                SizedBox(
+                  height: 20,
+                ),
+                _UserPhoneWidget(),
+                SizedBox(
+                  height: 20,
+                ),
+                _UserEmailWidget(),
+                SizedBox(
+                  height: 20,
+                ),
+              ],
+            )),
+        Positioned(
+          top: 25,
+          right: 25,
+          child: Text(
+            'Change',
+            style: TextStyle(color: Colors.amber, fontSize: 30),
+          ),
+        )
+      ],
+    );
   }
 }
 

@@ -10,21 +10,30 @@ class MainScreenWidget extends StatefulWidget {
 }
 
 class _MainScreenWidgetState extends State<MainScreenWidget> {
+  int _selectedTab = 0;
+  static const List<Widget> _widgets = [
+    Text('hui'),
+    Text('dui'),
+  ];
+
+  void onSelectTab(int index) {
+    if (_selectedTab == index) return;
+    setState(() {
+      _selectedTab = index;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text('TMDB'),
       ),
-      body: ElevatedButton(
-        child: Text('back'),
-        onPressed: () {
-          if (Navigator.of(context).canPop()) {
-            return Navigator.of(context).pop();
-          }
-        },
+      body: Center(
+        child: _widgets[_selectedTab],
       ),
       bottomNavigationBar: BottomNavigationBar(
+        currentIndex: _selectedTab,
         items: [
           BottomNavigationBarItem(
             icon: Icon(Icons.access_time),
@@ -35,6 +44,7 @@ class _MainScreenWidgetState extends State<MainScreenWidget> {
             label: 'hui',
           ),
         ],
+        onTap: onSelectTab,
       ),
     );
   }

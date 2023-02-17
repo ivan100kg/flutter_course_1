@@ -10,8 +10,16 @@ class MovieDB extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      title: 'MovieDB',
       theme: ThemeData(
-          appBarTheme: AppBarTheme(backgroundColor: AppColors.darkBlue)),
+        appBarTheme: AppBarTheme(backgroundColor: AppColors.darkBlue),
+        bottomNavigationBarTheme: BottomNavigationBarThemeData(
+          backgroundColor: AppColors.darkBlue,
+          selectedItemColor: Colors.white,
+          unselectedItemColor: Colors.grey,
+        ),
+      ),
+
       routes: {
         '/auth': (context) => AuthWidget(),
         '/main_screen': (context) => MainScreenWidget(),

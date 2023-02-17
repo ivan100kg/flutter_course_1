@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:flutter_complete_guide/movieDB/auth/main_screen_widget.dart';
 import 'package:flutter_complete_guide/movieDB/theme/button_style.dart';
 
 class AuthWidget extends StatefulWidget {
@@ -78,8 +79,8 @@ class _FormWidget extends StatefulWidget {
 
 class __FormWidgetState extends State<_FormWidget> {
   // button controllers
-  final _loginTextController = TextEditingController();
-  final _paswordTextController = TextEditingController();
+  final _loginTextController = TextEditingController(text: 'admin');
+  final _paswordTextController = TextEditingController(text: 'admin');
   String? errorMessage = null;
 
   // button handlers
@@ -88,6 +89,11 @@ class __FormWidgetState extends State<_FormWidget> {
     final _password = _paswordTextController.text;
     if (_login == 'admin' && _password == 'admin') {
       errorMessage = null;
+      final navigator = Navigator.of(context);
+      // final route =
+      // MaterialPageRoute<void>(builder: (context) => MainScreenWidget());
+      navigator.pushNamed('/main_screen');
+      // navigator.pushReplacementNamed('/main_screen');
     } else {
       errorMessage = 'Wrong!';
     }

@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 
+import 'movieDB/movie_db_app.dart';
 import 'widgets/app.dart';
 
 void main() {
   // final app = MyApp();
-  const app = App();
+  const app = MovieDB();
   runApp(app);
 }
 

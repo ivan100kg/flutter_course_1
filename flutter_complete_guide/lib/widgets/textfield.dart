@@ -1,80 +1,68 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 
-class MyTextField extends StatelessWidget {
+class MyTextField extends StatefulWidget {
   const MyTextField({super.key});
 
   @override
+  State<MyTextField> createState() => _MyTextFieldState();
+}
+
+class _MyTextFieldState extends State<MyTextField> {
+  final _controllerOne = TextEditingController(text: 'hello ');
+  final _controllerTwo = TextEditingController();
+
+  void _onChanged(String text) => print('_onChanged $text');
+
+  void _onEditingComplete() => print('_onEditingComplete');
+
+  void _onSubmitted(String text) => print('_onSubmitted $text');
+
+  void _onTab() {
+    _controllerOne.clear();
+    print('_onTab');
+  }
+
+  void _onAppPrivateCommand(String text, Map args) {
+    print('_onAppPrivateCommand $text');
+    print('_onAppPrivateCommand $args');
+  }
+
+  @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Center(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20),
-            child: TextField(
-              textInputAction: TextInputAction.next,
-              keyboardType: TextInputType.number,
+    return Center(
+      child: Padding(
+        padding: EdgeInsets.all(50),
+        child: Column(
+          children: [
+            TextField(
+              controller: _controllerOne,
+              onChanged: _onChanged,
+              onEditingComplete: _onEditingComplete,
+              onSubmitted: _onSubmitted,
+              onTap: _onTab,
+              onAppPrivateCommand: _onAppPrivateCommand,
               decoration: InputDecoration(
-                enabled: true,
-                errorText: null,
-                icon: Icon(Icons.access_time),
+                labelText: 'with events',
                 border: OutlineInputBorder(),
-                enabledBorder: OutlineInputBorder(
-                  borderSide: BorderSide(
-                    color: Colors.green,
-                    width: 5,
-                  ),
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(50),
-                  ),
-                ),
-                labelText: 'Hello',
-                labelStyle: TextStyle(
-                  color: Colors.deepOrange,
-                ),
-                helperText: 'Fuck you',
-                helperStyle: TextStyle(),
-                helperMaxLines: 1,
-                hintText: 'huohuohuou',
-                hintStyle: TextStyle(
-                  color: Colors.black12,
-                ),
-                floatingLabelBehavior: FloatingLabelBehavior.always,
-                prefixIcon: Icon(Icons.money),
-                prefix: Text('pre: '),
-                isCollapsed: true,
-                contentPadding: EdgeInsets.all(30),
-                filled: true,
-                fillColor: Colors.amber,
-                focusColor: Colors.black26,
-                hoverColor: Colors.black,
               ),
-              enableSuggestions: true,
-              textCapitalization: TextCapitalization.characters,
-              style: TextStyle(
-                fontSize: 30,
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            TextField(
+              controller: _controllerTwo,
+              decoration: InputDecoration(
+                labelText: 'without events',
+                border: OutlineInputBorder(),
               ),
-              maxLines: 2,
-              minLines: 2,
-              maxLength: 100,
-              textAlign: TextAlign.center,
             ),
-          ),
+          ],
         ),
-        Center(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20),
-            child: TextField(
-              textInputAction: TextInputAction.next,
-              obscureText: true,
-              obscuringCharacter: '#',
-              autocorrect: false,
-              enableSuggestions: false,
-            ),
-          ),
-        ),
-      ],
+      ),
     );
   }
 }

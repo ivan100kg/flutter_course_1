@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 
@@ -43,31 +44,37 @@ class _MyTextFieldState extends State<MyTextField> {
         child: Column(
           children: [
             TextField(
-              focusNode: _nodeOne,
-              controller: _controllerOne,
-              onChanged: _onChanged,
-              onEditingComplete: _onEditingComplete,
-              onSubmitted: _onSubmitted,
-              onTap: _onTab,
-              onAppPrivateCommand: _onAppPrivateCommand,
               decoration: InputDecoration(
-                labelText: 'with events',
                 border: OutlineInputBorder(),
               ),
+              inputFormatters: [
+                // FilteringTextInputFormatter.digitsOnly,
+                FilteringTextInputFormatter.allow(RegExp(r'[1,2]+')),
+              ],
             ),
             SizedBox(
               height: 10,
             ),
             TextField(
-              controller: _controllerTwo,
               decoration: InputDecoration(
-                labelText: 'without events',
                 border: OutlineInputBorder(),
               ),
             ),
           ],
         ),
       ),
+    );
+  }
+}
+
+class MyFormatter extends TextInputFormatter {
+  @override
+  TextEditingValue formatEditUpdate(
+      TextEditingValue oldValue, TextEditingValue newValue) {
+    final digitsOnly = newValue.text.replaceAll(RegExp(r'[^\d]'), '');
+    return TextEditingValue(
+      text: digitsOnly,
+      selection: TextSelection.collapsed(offset: digitsOnly.length),
     );
   }
 }

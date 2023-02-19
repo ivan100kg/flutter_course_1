@@ -14,6 +14,7 @@ class MyTextField extends StatefulWidget {
 class _MyTextFieldState extends State<MyTextField> {
   final _controllerOne = TextEditingController(text: 'hello ');
   final _controllerTwo = TextEditingController();
+  final _nodeOne = FocusNode();
 
   void _onChanged(String text) => print('_onChanged $text');
 
@@ -23,7 +24,10 @@ class _MyTextFieldState extends State<MyTextField> {
 
   void _onTab() {
     _controllerOne.clear();
-    print('_onTab');
+    _controllerOne.addListener(() => print('hui0'));
+    _controllerOne.value = TextEditingValue(
+      text: 'one',
+    );
   }
 
   void _onAppPrivateCommand(String text, Map args) {
@@ -39,6 +43,7 @@ class _MyTextFieldState extends State<MyTextField> {
         child: Column(
           children: [
             TextField(
+              focusNode: _nodeOne,
               controller: _controllerOne,
               onChanged: _onChanged,
               onEditingComplete: _onEditingComplete,

@@ -7,6 +7,7 @@ import 'package:flutter_complete_guide/widgets/user_profile.dart';
 
 import '../movieDB/movie_db_app.dart';
 import 'buttons.dart';
+import 'context.dart';
 import 'keys.dart';
 import 'list_view.dart';
 
@@ -20,7 +21,7 @@ class App extends StatelessWidget {
       // home: UserProfile(),
       home: Scaffold(
         appBar: AppBar(title: Text('Bar')),
-        body: MyKey(),
+        body: MyContext(),
       ),
     );
   }

@@ -29,8 +29,12 @@ class _MainScreenWidgetState extends State<MainScreenWidget> {
       appBar: AppBar(
         title: Text('TMDB'),
       ),
-      body: Center(
-        child: _widgets[_selectedTab],
+      body: IndexedStack(
+        children: [
+          _widgets[_selectedTab],
+          TextField(),
+          Text('fuck you'),
+        ],
       ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedTab,

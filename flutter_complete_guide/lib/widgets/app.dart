@@ -5,6 +5,7 @@ import 'package:flutter_complete_guide/widgets/stack.dart';
 import 'package:flutter_complete_guide/widgets/textfield.dart';
 import 'package:flutter_complete_guide/widgets/user_profile.dart';
 
+import '../movieDB/movie_db_app.dart';
 import 'buttons.dart';
 import 'keys.dart';
 import 'list_view.dart';

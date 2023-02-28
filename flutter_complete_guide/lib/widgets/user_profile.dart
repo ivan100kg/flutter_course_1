@@ -72,15 +72,21 @@ class _MenuWidgetRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
-      child: Row(
-        children: [
-          Icon(data.icon),
-          SizedBox(width: 10),
-          Expanded(child: Text(data.text)),
-          Icon(Icons.chevron_right_sharp),
-        ],
+    return Material(
+      // color: Colors.transparent,
+      child: InkWell(
+        onTap: () => print('hui'),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+          child: Row(
+            children: [
+              Icon(data.icon),
+              SizedBox(width: 10),
+              Expanded(child: Text(data.text)),
+              Icon(Icons.chevron_right_sharp),
+            ],
+          ),
+        ),
       ),
     );
   }

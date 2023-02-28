@@ -6,7 +6,7 @@ import 'widgets/app.dart';
 
 void main() {
   // final app = MyApp();
-  const app = App();
+  const app = MovieDB();
   runApp(app);
 }
 

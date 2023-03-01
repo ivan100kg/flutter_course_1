@@ -38,9 +38,10 @@ class MyContextInto extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
-        child: ElevatedButton(
-            onPressed: () => foo(context), child: Text('press'));
+      child: ElevatedButton(
+        onPressed: () => foo(context),
+        child: Text('press'),
+      ),
     );
-    
   }
 }

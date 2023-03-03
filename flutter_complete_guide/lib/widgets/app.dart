@@ -6,6 +6,7 @@ import 'package:flutter_complete_guide/widgets/stack.dart';
 import 'package:flutter_complete_guide/widgets/textfield.dart';
 import 'package:flutter_complete_guide/widgets/user_profile.dart';
 
+import '../learn-data/json.dart';
 import '../movieDB/movie_db_app.dart';
 import 'buttons.dart';
 import 'context.dart';
@@ -23,7 +24,7 @@ class App extends StatelessWidget {
       // home: UserProfile(),
       home: Scaffold(
         appBar: AppBar(title: Text('Bar')),
-        body: MyMainInh(),
+        body: MyJSON(),
       ),
     );
   }

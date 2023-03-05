@@ -6,12 +6,18 @@ part of 'serializable.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-User _$UserFromJson(Map<String, dynamic> json) => User(
-      json['name'] as String,
-      json['email'] as String,
-    );
+User _$UserFromJson(Map<String, dynamic> json) {
+  $checkKeys(
+    json,
+    requiredKeys: const ['1почта'],
+  );
+  return User(
+    json['name'] as String,
+    json['1почта'] as String? ?? 'sd',
+  );
+}
 
 Map<String, dynamic> _$UserToJson(User instance) => <String, dynamic>{
       'name': instance.name,
-      'email': instance.email,
+      '1почта': instance.email,
     };

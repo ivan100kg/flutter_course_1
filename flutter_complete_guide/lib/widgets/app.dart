@@ -13,6 +13,7 @@ import 'context.dart';
 import 'inherit.dart';
 import 'keys.dart';
 import 'list_view.dart';
+import 'network/example_app.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -24,7 +25,7 @@ class App extends StatelessWidget {
       // home: UserProfile(),
       home: Scaffold(
         appBar: AppBar(title: Text('Bar')),
-        body: MyJSON(),
+        body: MyHttp(),
       ),
     );
   }

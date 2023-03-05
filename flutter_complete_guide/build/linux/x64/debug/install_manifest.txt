@@ -4,6 +4,7 @@
 /home/ivan/Programming/Projects/flutter_course_1/flutter_complete_guide/build/linux/x64/debug/bundle/data/flutter_assets/fonts/Rubik-VariableFont_wght.ttf
 /home/ivan/Programming/Projects/flutter_course_1/flutter_complete_guide/build/linux/x64/debug/bundle/data/flutter_assets/fonts/MaterialIcons-Regular.otf
 /home/ivan/Programming/Projects/flutter_course_1/flutter_complete_guide/build/linux/x64/debug/bundle/data/flutter_assets/version.json
+/home/ivan/Programming/Projects/flutter_course_1/flutter_complete_guide/build/linux/x64/debug/bundle/data/flutter_assets/images/audio.png
 /home/ivan/Programming/Projects/flutter_course_1/flutter_complete_guide/build/linux/x64/debug/bundle/data/flutter_assets/FontManifest.json
 /home/ivan/Programming/Projects/flutter_course_1/flutter_complete_guide/build/linux/x64/debug/bundle/data/flutter_assets/AssetManifest.json
 /home/ivan/Programming/Projects/flutter_course_1/flutter_complete_guide/build/linux/x64/debug/bundle/data/flutter_assets/kernel_blob.bin

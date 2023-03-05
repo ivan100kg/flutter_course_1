@@ -6,8 +6,6 @@ import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter_complete_guide/learn-data/human.dart';
 import 'package:flutter_complete_guide/learn-data/json_data.dart';
 
-import '../domain/client/api_client_article.dart';
-
 class MyJSON extends StatelessWidget {
   const MyJSON({super.key});
 
@@ -33,7 +31,7 @@ class MyJSON extends StatelessWidget {
           ),
           ElevatedButton(
             child: Text('get'),
-            onPressed: () => ApiClientCelebs().getCelebs(),
+            onPressed: () {},
           ),
         ],
       ),
